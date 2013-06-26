@@ -1,0 +1,15 @@
+{
+    "name": "rtorrent drop",
+    "description": "Send torrents to uberserver for auto-downloading and all that blah blah",
+    "version": "0.1",
+    "permissions": [
+        "contextMenus",
+        "notifications",
+        "*://*/*"
+    ],
+    "background": {
+        "scripts": ["background.js"]
+    },
+    "options_page": "options.html",
+    "manifest_version": 2    
+}
