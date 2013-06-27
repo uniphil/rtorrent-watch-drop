@@ -1,7 +1,7 @@
 #!/usr/bin/python2
 
 import os
-from flask import Flask, request
+from flask import Flask, request, render_to_response
 import requests
 
 app = Flask(__name__)
@@ -10,7 +10,12 @@ app = Flask(__name__)
 WATCH_BASE = '/home/ship/torrent/watch/'
 
 
-@app.route('/', methods=['POST'])
+@app.rooute('/')
+def ui():
+    return render_
+
+
+@app.route('/drop', methods=['POST'])
 def catch():
     destination_sub = request.form['destination']
     destination_abs = os.path.abspath(os.path.join(WATCH_BASE, destination_sub))
@@ -28,7 +33,7 @@ def catch():
     except IOError as e:
         return "Couldn't save. Maybe fix the destination? {}".format(e), 401, []
 
-    return "cool."
+    return "cool."    
 
 
 if __name__ == '__main__':
