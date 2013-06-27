@@ -1,6 +1,9 @@
+// chrome extension background thing
+var server_drop_path = '/drop'
+
 var getClickHandler = function() {
   return function(linkData) {
-    var url = localStorage['url'],
+    var url = localStorage['url'] + server_drop_path,
         dest = localStorage['dest'];
     if (!url || !dest) {
       webkitNotifications.createNotification("",

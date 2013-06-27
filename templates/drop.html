@@ -1,4 +1,26 @@
 <!doctype html>
 <html>
-
+    <head>
+        <title>Drop Torrents</title>
+    </head>
+    <body>
+        <h1>Drop Torrents</h1>
+        <form method="POST" action="{{ url_for('catch') }}">
+            <label for="destination">destination</label>
+            <input
+                type="text"
+                name="destination"
+                id="destination"
+                value="jamie/what"
+            />
+            <label for="url">torrent url</label>
+            <input
+                type="text"
+                name="url"
+                id="url"
+                placeholder="drop a link here..."
+            />
+            <button type="submit">drop</button>
+        </form>
+    </body>
 </html>
